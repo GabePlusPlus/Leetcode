@@ -44,8 +44,8 @@ class Solution {
             *t1 = l1,
             *t2 = l2;  // Good practice not to modify l1 and l2 directly
         precursor = current_node = new ListNode;
-        unsigned short int subtotal = UNSIGNED_SHORT(0),
-                           carry = UNSIGNED_SHORT(0);
+        unsigned short int subtotal = 0,
+                           carry = 0;
 
         while ((t1 != nullptr || t2 != nullptr) || carry) {
             subtotal = carry;
