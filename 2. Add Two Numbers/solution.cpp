@@ -9,8 +9,6 @@
  * };
  */
 
-#define UNSIGNED_SHORT(X) static_cast<unsigned short int>(X)
-
 class Solution {
    public:
     inline void carryAdjust(unsigned short int& subtotal,
@@ -24,11 +22,11 @@ class Solution {
          * Otherwise, leaves the subtotal variable untouched and sets the carry
          * variable to 0.
          */
-        if (subtotal > UNSIGNED_SHORT(9)) {
-            carry = subtotal / UNSIGNED_SHORT(10);
-            subtotal = subtotal % UNSIGNED_SHORT(10);
+        if (subtotal > 9) {
+            carry = subtotal / 10;
+            subtotal = subtotal % 10;
         } else {
-            carry = UNSIGNED_SHORT(0);
+            carry = 0;
         }
     }
 
